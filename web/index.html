@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Image Relighter</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>AI Image Relighter</h1>
+  <input type="file" id="image">
+  <select id="direction">
+    <option value="front">Front</option>
+    <option value="side">Side</option>
+    <option value="back">Back</option>
+  </select>
+  <input type="range" id="brightness" min="50" max="150" value="100">
+  <button onclick="generate()">Generate</button>
+  <div id="result"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
