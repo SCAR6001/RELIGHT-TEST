@@ -1,20 +1,26 @@
 {
   "name": "AI Image Relighter",
   "description": "Relight any image using AI (SwitchLight-inspired)",
-  "version": "1.0",
-  "type": "app",
-  "entry": "app/main.py",
+  "version": "1.0.0",
+  "author": "You",
+  "type": "python",
   "python": "3.10",
-  "install": [
-    "pip install -r app/requirements.txt"
-  ],
-  "run": [
-    "uvicorn app.main:app --host 0.0.0.0 --port 7860"
-  ],
+
+  "scripts": {
+    "install": {
+      "cmd": "pip install -r app/requirements.txt"
+    },
+    "run": {
+      "cmd": "uvicorn app.main:app --host 0.0.0.0 --port 7860",
+      "daemon": true,
+      "open": true
+    }
+  },
+
   "ports": [
     {
-      "containerPort": 7860,
-      "hostPort": 7860
+      "port": 7860,
+      "protocol": "http"
     }
   ]
 }
